@@ -5,10 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version: ruby-2.5.5
+# Ruby version:
+```
+ruby-2.5.5
+```
+## Ruby on Rails version:
+```
+Rails 6.1.4.1
+```
 
-* System dependencies
-
+---
+# System dependencies
+> add or uncomment in `/Gemfile` the following gems
 
 ---
 ### [bcrypt](https://rubygems.org/gems/bcrypt/versions/3.1.11)
@@ -49,27 +57,63 @@ gem 'active_model_serializers', '~> 0.10.2'
 ```
 gem 'jwt'
 ```
----
 
 ---
-### [figaro)](https://jwt.io/)
+### [figaro](https://jwt.io/)
 > Parses a Git-ignored YAML file in your application and loads its values into ENV.
 ```
 gem 'figaro'
 ```
 ---
 
-* Configuration
+# Configuration
+In `m_disny_api` directory run the following commands:
+
+> Download and install the gems
+
+`$ bundle install`
+
+> Generate boilerplate configuration files
+
+`$ rails generate rspec:install`
+
+> **Atention** If show you the next message
+```sh
+. . .
+. . .
+Overwrite /home/chocolatito/ruby/m_dsny_api/spec/spec_helper.rb? (enter "h" for help) [Ynaqdhm]
+
+```
+
+> Enter `n`
+
+> Create `/config/application.yml`
+
+`$ bundle exec figaro install`
+
+---
+# Database initialization
+```
+rails db:migrate
+rails db:migrate:status
+rails db:seed
+```
+You can read the migration for the models in `db/migrate/`
+
+The script to generate the initial records is in `db/seeds.rb`
 
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+---
+# How to run the test suite
+```
+rspec spec/requests/
+rspec spec/routing/
+```
 
-* Deployment instructions
+---
+# Services (job queues, cache servers, search engines, etc.)
 
-* ...
+See endpoint documentation at: [https://documenter.getpostman.com/view/18347954/UVCCd3Ua](https://documenter.getpostman.com/view/18347954/UVCCd3Ua)
