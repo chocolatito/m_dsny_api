@@ -1,0 +1,7 @@
+Prefix Verb   URI Pattern           Controller#Action
+genres GET    /genres(.:format)     genres#index
+       POST   /genres(.:format)     genres#create
+ genre GET    /genres/:id(.:format) genres#show
+       PATCH  /genres/:id(.:format) genres#update
+       PUT    /genres/:id(.:format) genres#update
+       DELETE /genres/:id(.:format) genres#destroy

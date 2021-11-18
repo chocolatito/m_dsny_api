@@ -1,0 +1,7 @@
+Prefix Verb   URI Pattern           Controller#Action
+movies GET    /movies(.:format)     movies#index
+       POST   /movies(.:format)     movies#create
+ movie GET    /movies/:id(.:format) movies#show
+       PATCH  /movies/:id(.:format) movies#update
+       PUT    /movies/:id(.:format) movies#update
+       DELETE /movies/:id(.:format) movies#destroy

@@ -1,0 +1,2 @@
+    Prefix Verb URI Pattern           Controller#Action
+auth_login POST /auth/login(.:format) authentication#login

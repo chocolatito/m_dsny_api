@@ -1,0 +1,7 @@
+    Prefix Verb   URI Pattern               Controller#Action
+characters GET    /characters(.:format)     characters#index
+           POST   /characters(.:format)     characters#create
+ character GET    /characters/:id(.:format) characters#show
+           PATCH  /characters/:id(.:format) characters#update
+           PUT    /characters/:id(.:format) characters#update
+           DELETE /characters/:id(.:format) characters#destroy

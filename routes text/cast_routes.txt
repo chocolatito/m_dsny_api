@@ -1,0 +1,7 @@
+Prefix Verb   URI Pattern          Controller#Action
+ casts GET    /casts(.:format)     casts#index
+       POST   /casts(.:format)     casts#create
+  cast GET    /casts/:id(.:format) casts#show
+       PATCH  /casts/:id(.:format) casts#update
+       PUT    /casts/:id(.:format) casts#update
+       DELETE /casts/:id(.:format) casts#destroy
