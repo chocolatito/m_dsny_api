@@ -149,6 +149,6 @@ rspec spec/routing/
 ```
 
 ---
-# Services (job queues, cache servers, search engines, etc.)
+# Services
 
 See endpoint documentation at: [https://documenter.getpostman.com/view/18347954/UVCCd3Ua](https://documenter.getpostman.com/view/18347954/UVCCd3Ua)
