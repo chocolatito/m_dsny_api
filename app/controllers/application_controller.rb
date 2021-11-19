@@ -4,8 +4,7 @@ class ApplicationController < ActionController::API
     render json: { error: 'not_found' }
   end
 
-  # Verifica que el header
-  # envia un JsonWebToken valido (los token expiran en 24hs)
+  # Verify that the header sends a valid JsonWebToken
   def authorize_request
     header = request.headers['Authorization']
     header = header.split(' ').last if header
@@ -13,10 +12,10 @@ class ApplicationController < ActionController::API
       @decoded = JsonWebToken.decode(header)
       @current_user = User.find(@decoded[:user_id])
     rescue ActiveRecord::RecordNotFound => e
-      # El token a expirado?
+      # The token has expired
       render json: { errors: e.message }, status: :unauthorized
     rescue JWT::DecodeError => e
-      # El token no es valido?
+      # The token is not valid
       render json: { errors: "#{e.message} go to /auth/login" }, status: :unauthorized
     end
   end

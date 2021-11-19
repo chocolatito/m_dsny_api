@@ -44,7 +44,7 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
+  # List of trusted parameters through.
   def genre_params
     params.require(:genre).permit(:name, :url_picture)
   end

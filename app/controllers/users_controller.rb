@@ -8,11 +8,6 @@ class UsersController < ApplicationController
     render json: @users, status: :ok
   end
 
-  # # GET /users/{username}
-  # def show
-  #   render json: @user, status: :ok
-  # end
-
   # POST /users
   def create
     @user = User.new(user_params)
@@ -25,16 +20,6 @@ class UsersController < ApplicationController
              status: :unprocessable_entity
     end
   end
-
-  # # PUT /users/{username}
-  # def update
-  #   render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
-  # end
-
-  # # DELETE /users/{username}
-  # def destroy
-  #   @user.destroy
-  # end
 
   private
 

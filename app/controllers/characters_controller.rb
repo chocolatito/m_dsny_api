@@ -45,6 +45,8 @@ class CharactersController < ApplicationController
     @character = Character.find(params[:id])
   end
 
+  # Characters for :name, :age and :movies (Cast.id_movie)
+  # or all Characters
   def set_characters
     @characters = if params[:name]
                     Character.by_name(params[:name])
@@ -57,7 +59,7 @@ class CharactersController < ApplicationController
                   end
   end
 
-  # Only allow a list of trusted parameters through.
+  # List of trusted parameters through.
   def character_params
     params.require(:character).permit(:url_picture, :name, :age, :weight, :history)
   end

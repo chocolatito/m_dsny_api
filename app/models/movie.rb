@@ -1,12 +1,10 @@
-# :movie_or_serie, :url_picture, :title, :debut_date, :score, :gender_id
-
 class Movie < ApplicationRecord
   include UrlConcern
   validates :movie_or_serie,
             presence: true,
             inclusion: {
               in: %w[MOVIE SERIE],
-              message: "'%{value}' is not a content type. Only 'MOVIE' or 'SERIE' is allowed"
+              message: "'%{value}' is an invalid value. Only 'MOVIE' or 'SERIE' is allowed"
             }
   validates :title, presence: true, uniqueness: true
   validates :debut_date, presence: true

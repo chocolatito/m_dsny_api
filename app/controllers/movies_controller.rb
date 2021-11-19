@@ -44,6 +44,8 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
+  # Movies for :name (:title), :genre (:genre_id) and :order (ASC/DESC)
+  # or all Movies
   def set_movies
     @movies = if params[:name]
                 Movie.by_title(params[:name])
@@ -56,7 +58,7 @@ class MoviesController < ApplicationController
               end
   end
 
-  # Only allow a list of trusted parameters through.
+  # List of trusted parameters through.
   def movie_params
     params.require(:movie).permit(
       :movie_or_serie, :url_picture, :title, :debut_date, :score, :genre_id

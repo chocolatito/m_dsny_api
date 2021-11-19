@@ -44,7 +44,7 @@ class CastsController < ApplicationController
     @cast = Cast.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
+  # List of trusted parameters through.
   def cast_params
     params.require(:cast).permit(:movie_id, :character_id)
   end

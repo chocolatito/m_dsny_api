@@ -1,8 +1,5 @@
-# Para los modelos que definen el campo :url_picture
-# Genre
-# Character
-# Movie
-#
+# For the <:url_picture> field in
+# Genre, Movie and Character
 
 module UrlConcern
   extend ActiveSupport::Concern
