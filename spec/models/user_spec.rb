@@ -22,4 +22,3 @@ RSpec.describe User, type: :model do
     expect(User.new(email: 'user_a@example.com', password: 'p')).to_not be_valid
   end
 end
-# rails generate rspec:model movie
