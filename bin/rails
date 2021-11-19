@@ -3,4 +3,3 @@ load File.expand_path("spring", __dir__)
 APP_PATH = File.expand_path('../config/application', __dir__)
 require_relative "../config/boot"
 require "rails/commands"
-API_KEY = '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'
